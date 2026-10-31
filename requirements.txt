@@ -1,0 +1,8 @@
+anthropic>=0.40.0      # only needed when LLM_PROVIDER=anthropic
+openai>=1.50.0         # only needed when LLM_PROVIDER=openai (also used for Ollama / LM Studio / vLLM)
+ddgs>=9.0.0            # free web search, no API key
+requests>=2.31
+beautifulsoup4>=4.12
+pypdf>=4.0
+scikit-learn>=1.3
+python-dotenv>=1.0

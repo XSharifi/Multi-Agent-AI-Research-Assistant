@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 690" width="900" height="690" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrowDash" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b45309"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="690" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">Multi-Agent AI Research Assistant</text>
+
+  <!-- connectors -->
+  <g fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M450 96 V130"/>
+    <path d="M450 194 V226 H170 V258"/>
+    <path d="M450 194 V258"/>
+    <path d="M450 194 V226 H730 V258"/>
+    <path d="M170 318 V366"/>
+    <path d="M450 318 V366"/>
+    <path d="M730 318 V366"/>
+    <path d="M170 426 V458 H450 V490"/>
+    <path d="M450 426 V490"/>
+    <path d="M730 426 V458 H450 V490"/>
+    <path d="M450 554 V596"/>
+  </g>
+  <!-- revision loop -->
+  <path d="M610 522 H868 V288 H832" fill="none" stroke="#b45309" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrowDash)"/>
+  <text x="740" y="512" text-anchor="middle" font-size="13" fill="#b45309" font-weight="600">revise (feedback, 1 round)</text>
+
+  <!-- User -->
+  <g filter="url(#shadow)">
+    <rect x="360" y="46" width="180" height="50" rx="25" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5"/>
+    <text x="450" y="78" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">User</text>
+  </g>
+
+  <!-- Orchestrator -->
+  <g filter="url(#shadow)">
+    <rect x="290" y="130" width="320" height="64" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="450" y="157" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">Orchestrator</text>
+    <text x="450" y="178" text-anchor="middle" font-size="12.5" fill="#1e40af">plans, dispatches in parallel, writes the report</text>
+  </g>
+
+  <!-- Agents -->
+  <g filter="url(#shadow)">
+    <rect x="70" y="258" width="200" height="60" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="170" y="285" text-anchor="middle" font-size="16" font-weight="700" fill="#14532d">Research Agent</text>
+    <text x="170" y="305" text-anchor="middle" font-size="12.5" fill="#166534">current info from the web</text>
+
+    <rect x="350" y="258" width="200" height="60" rx="12" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+    <text x="450" y="285" text-anchor="middle" font-size="16" font-weight="700" fill="#713f12">Paper Agent</text>
+    <text x="450" y="305" text-anchor="middle" font-size="12.5" fill="#854d0e">answers from your PDFs</text>
+
+    <rect x="630" y="258" width="200" height="60" rx="12" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+    <text x="730" y="285" text-anchor="middle" font-size="16" font-weight="700" fill="#831843">Coding Agent</text>
+    <text x="730" y="305" text-anchor="middle" font-size="12.5" fill="#9d174d">writes and runs code</text>
+  </g>
+
+  <!-- Tools -->
+  <g filter="url(#shadow)">
+    <rect x="70" y="366" width="200" height="60" rx="30" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="170" y="393" text-anchor="middle" font-size="15" font-weight="700" fill="#14532d">Web Search</text>
+    <text x="170" y="412" text-anchor="middle" font-size="12" fill="#166534">DuckDuckGo + page reader</text>
+
+    <rect x="350" y="366" width="200" height="60" rx="30" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5"/>
+    <text x="450" y="393" text-anchor="middle" font-size="15" font-weight="700" fill="#713f12">PDF / RAG</text>
+    <text x="450" y="412" text-anchor="middle" font-size="12" fill="#854d0e">TF-IDF over local papers</text>
+
+    <rect x="630" y="366" width="200" height="60" rx="30" fill="#fdf2f8" stroke="#db2777" stroke-width="1.5"/>
+    <text x="730" y="393" text-anchor="middle" font-size="15" font-weight="700" fill="#831843">Python</text>
+    <text x="730" y="412" text-anchor="middle" font-size="12" fill="#9d174d">subprocess with timeout</text>
+  </g>
+
+  <!-- Evaluation -->
+  <g filter="url(#shadow)">
+    <rect x="290" y="490" width="320" height="64" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="450" y="517" text-anchor="middle" font-size="17" font-weight="700" fill="#4c1d95">Evaluation Agent</text>
+    <text x="450" y="538" text-anchor="middle" font-size="12.5" fill="#5b21b6">scores evidence, consistency, completeness</text>
+  </g>
+
+  <!-- Final report -->
+  <g filter="url(#shadow)">
+    <rect x="340" y="596" width="220" height="56" rx="28" fill="#0f172a" stroke="#0f172a" stroke-width="1.5"/>
+    <text x="450" y="621" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Final Report</text>
+    <text x="450" y="639" text-anchor="middle" font-size="12" fill="#cbd5e1">Markdown saved in reports/</text>
+  </g>
+</svg>
